@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1755535181
+::res://::1776540592
 icon.svg::CompressedTexture2D::6219793069513324915::1755184570::1755184580::1::::<><>::
 ::res://assets/::1755185341
 ::res://assets/Mini FX, Items & UI/::1755185308
@@ -317,7 +317,7 @@ Smacked (32 x 32).png::CompressedTexture2D::4717392077627144315::1597584554::175
 Squished (32 x 32).png::CompressedTexture2D::3626310023011333338::1597584436::1755185352::1::::<><>::
 Standing (32 x 32).png::CompressedTexture2D::8661937627280532650::1597584142::1755185352::1::::<><>::
 Walking (32 x 32).png::CompressedTexture2D::1608757067364142308::1597584260::1755185352::1::::<><>::
-::res://levels/::1755192728
-world_01.tscn::PackedScene::4747270006647682846::1755192728::0::1::::<><>::res://scripts/player.gd<>uid://c0a2hg2mlrq4q::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png<>uid://cir0wt8kw1hhw::::res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png<>uid://baqxtcgmdgnh3::::res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png
-::res://scripts/::1755190945
-player.gd::GDScript::-1::1755190945::0::1::::<>CharacterBody2D<>::
+::res://Levels/::1776540462
+world_01.tscn::PackedScene::8219170002747233273::1776540462::0::1::::<><>::uid://c0a2hg2mlrq4q::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png<>res://Scripts/player.gd
+::res://Scripts/::1776540325
+player.gd::GDScript::-1::1776540325::0::1::::<>CharacterBody2D<>::

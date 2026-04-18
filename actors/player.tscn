@@ -1,51 +1,55 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbu7kqx16lc3i"]
+[gd_scene load_steps=7 format=3 uid="uid://ct58h0xmlm4vh"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_hoefu"]
-[ext_resource type="Texture2D" uid="uid://c0a2hg2mlrq4q" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png" id="2_lw108"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_hsfrn"]
+[ext_resource type="Texture2D" uid="uid://c0a2hg2mlrq4q" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png" id="2_3vbno"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a1130"]
-atlas = ExtResource("2_lw108")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ye4lk"]
-atlas = ExtResource("2_lw108")
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3dhg"]
+atlas = ExtResource("2_3vbno")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_b3bah"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cy5pu"]
+atlas = ExtResource("2_3vbno")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ylilf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a1130")
+"texture": SubResource("AtlasTexture_q3dhg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ye4lk")
+"texture": SubResource("AtlasTexture_cy5pu")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqs0s"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbg5"]
 size = Vector2(12, 13)
 
-[node name="player" type="CharacterBody2D"]
-position = Vector2(0, -16)
-collision_mask = 2
-script = ExtResource("1_hoefu")
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(0, -6)
+collision_layer = 2
+collision_mask = 13
+script = ExtResource("1_hsfrn")
 
-[node name="animation" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_b3bah")
+[node name="Texture" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+sprite_frames = SubResource("SpriteFrames_ylilf")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.423757
+frame = 1
+frame_progress = 0.291963
 
-[node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8.5)
-shape = SubResource("RectangleShape2D_hqs0s")
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_rkbg5")
 
-[node name="camera" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+[node name="Camera" type="Camera2D" parent="."]
 limit_left = 0
-drag_horizontal_enabled = true
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_left_margin = 0.5
+drag_right_margin = 0.5
 editor_draw_limits = true
-editor_draw_drag_margin = true
