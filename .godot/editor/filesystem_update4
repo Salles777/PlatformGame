@@ -1,3 +1,6 @@
-res://Actors/player.tscn
-res://Scripts/player.gd
 res://Levels/world_01.tscn
+res://Scripts/player.gd
+res://Actors/player.tscn
+res://Shaders/movement_clouds.gdshader
+res://Prefabs/moving_platform.tscn
+res://Scripts/moving_platform.gd

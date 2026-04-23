@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_FORCE = -400.0
+const SPEED = 100.0
+const JUMP_FORCE = -300.0
 
 var is_jumping = false
 
