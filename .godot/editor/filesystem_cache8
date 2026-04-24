@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1776944336
+::res://::1777031438
 icon.svg::CompressedTexture2D::6219793069513324915::1755184570::1755184580::1::::<><>::
-::res://Actors/::1776687898
-player.tscn::PackedScene::6170378239623924117::1776687898::0::1::::<><>::res://Scripts/player.gd<>uid://c0a2hg2mlrq4q::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png<>uid://d23k36nj522la::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png<>uid://matjb5i5ml7v::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png
+::res://Actors/::1776950233
+player.tscn::PackedScene::6170378239623924117::1776950233::0::1::::<><>::res://Scripts/player.gd<>uid://c0a2hg2mlrq4q::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png<>uid://d23k36nj522la::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png<>uid://matjb5i5ml7v::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png
 ::res://assets/::1755185341
 ::res://assets/Mini FX, Items & UI/::1755185308
 LICENSE.txt::TextFile::-1::1593868726::0::1::::<><>::
@@ -319,7 +319,12 @@ Smacked (32 x 32).png::CompressedTexture2D::4717392077627144315::1597584554::175
 Squished (32 x 32).png::CompressedTexture2D::3626310023011333338::1597584436::1755185352::1::::<><>::
 Standing (32 x 32).png::CompressedTexture2D::8661937627280532650::1597584142::1755185352::1::::<><>::
 Walking (32 x 32).png::CompressedTexture2D::1608757067364142308::1597584260::1755185352::1::::<><>::
-::res://Levels/::1776687919
-world_01.tscn::PackedScene::8219170002747233273::1776687919::0::1::::<><>::uid://cir0wt8kw1hhw::::res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png<>uid://baqxtcgmdgnh3::::res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png<>uid://ct58h0xmlm4vh::::res://Actors/player.tscn
-::res://Scripts/::1776687887
-player.gd::GDScript::-1::1776687887::0::1::::<>CharacterBody2D<>::
+::res://Levels/::1776950313
+world_01.tscn::PackedScene::8219170002747233273::1776950313::0::1::::<><>::uid://cir0wt8kw1hhw::::res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png<>uid://baqxtcgmdgnh3::::res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png<>uid://ct58h0xmlm4vh::::res://Actors/player.tscn<>uid://mj48w4x3kwei::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png<>uid://v1px0y74ms6q::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png<>res://Shaders/movement_clouds.gdshader<>uid://fvgrhj288w36::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png<>uid://sxyg83gvtwr::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png<>uid://c6l3c5pq8xlii::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png<>uid://der3ysppi05jw::::res://Prefabs/moving_platform.tscn
+::res://Prefabs/::1776950233
+moving_platform.tscn::PackedScene::7476855751587235880::1776950233::0::1::::<><>::res://Scripts/moving_platform.gd<>uid://1i3nikkisxfk::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png
+::res://Scripts/::1776950183
+moving_platform.gd::GDScript::-1::1776947483::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1776950183::0::1::::<>CharacterBody2D<>::
+::res://Shaders/::1776950316
+movement_clouds.gdshader::Shader::-1::1776950316::0::1::::<><>::
