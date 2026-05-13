@@ -21,12 +21,18 @@ window/size/viewport_height=320
 window/stretch/mode="viewport"
 window/stretch/scale=2.0
 
+[global_group]
+
+enemies=""
+
 [layer_names]
 
 2d_physics/layer_1="World"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Enemies"
 2d_physics/layer_4="Items"
+2d_physics/layer_5="Hitbox"
+2d_physics/layer_6="Hurtbox"
 
 [rendering]
 

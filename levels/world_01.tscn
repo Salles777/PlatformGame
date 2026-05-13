@@ -1,17 +1,18 @@
-[gd_scene load_steps=17 format=4 uid="uid://dpdor8webu5rp"]
+[gd_scene load_steps=18 format=4 uid="uid://dpdor8webu5rp"]
 
+[ext_resource type="Script" path="res://Scripts/world_01.gd" id="1_2updk"]
 [ext_resource type="Texture2D" uid="uid://cir0wt8kw1hhw" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_gg7c3"]
 [ext_resource type="Texture2D" uid="uid://baqxtcgmdgnh3" path="res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_k26by"]
 [ext_resource type="PackedScene" uid="uid://ct58h0xmlm4vh" path="res://Actors/player.tscn" id="3_dno6j"]
 [ext_resource type="PackedScene" uid="uid://cccptwdah85j7" path="res://Prefabs/coin.tscn" id="3_g8sr8"]
 [ext_resource type="Texture2D" uid="uid://mj48w4x3kwei" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="4_ovmii"]
-[ext_resource type="PackedScene" uid="uid://47qalix852ib" path="res://Actors/enemy.tscn" id="4_tct1c"]
 [ext_resource type="Texture2D" uid="uid://v1px0y74ms6q" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png" id="5_68bs4"]
 [ext_resource type="Shader" path="res://Shaders/movement_clouds.gdshader" id="6_2keh7"]
 [ext_resource type="Texture2D" uid="uid://fvgrhj288w36" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" id="6_bggar"]
 [ext_resource type="Texture2D" uid="uid://sxyg83gvtwr" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" id="7_jkjxn"]
 [ext_resource type="Texture2D" uid="uid://c6l3c5pq8xlii" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="8_ghnt7"]
 [ext_resource type="PackedScene" uid="uid://der3ysppi05jw" path="res://Prefabs/moving_platform.tscn" id="10_xdj0d"]
+[ext_resource type="PackedScene" uid="uid://e7rbtxdvaw6t" path="res://Actors/enemy_2.tscn" id="13_qfdkn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ymioe"]
 texture = ExtResource("1_gg7c3")
@@ -104,6 +105,7 @@ shader = ExtResource("6_2keh7")
 shader_parameter/move_speed = 0.05
 
 [node name="World-01" type="Node2D"]
+script = ExtResource("1_2updk")
 
 [node name="Level" type="Node2D" parent="."]
 
@@ -231,8 +233,16 @@ centered = false
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Enemy" parent="Enemies" instance=ExtResource("4_tct1c")]
-position = Vector2(286, 286)
+[node name="Enemy1" parent="Enemies" instance=ExtResource("13_qfdkn")]
+position = Vector2(271, 286)
 
-[node name="Enemy2" parent="Enemies" instance=ExtResource("4_tct1c")]
-position = Vector2(335, 286)
+[node name="Enemy2" parent="Enemies" instance=ExtResource("13_qfdkn")]
+position = Vector2(325, 286)
+
+[node name="Camera" type="Camera2D" parent="."]
+limit_left = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_left_margin = 0.5
+drag_right_margin = 0.5
+editor_draw_limits = true

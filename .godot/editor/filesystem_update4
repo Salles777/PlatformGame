@@ -1,8 +1,14 @@
 res://Shaders/movement_clouds.gdshader
+res://Actors/enemy_2.tscn
+res://Scripts/enemy_2.gd
+res://Scripts/enemy.gd
 res://Levels/world_01.tscn
 res://Actors/player.tscn
 res://Prefabs/moving_platform.tscn
 res://Prefabs/coin.tscn
-res://Scripts/coin.gd
 res://Actors/enemy.tscn
-res://Scripts/enemy.gd
+res://Scripts/hitbox.gd
+res://Prefabs/hitbox.tscn
+res://Scripts/player.gd
+res://Scripts/moving_platform.gd
+res://Scripts/world_01.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ct58h0xmlm4vh"]
+[gd_scene load_steps=14 format=3 uid="uid://ct58h0xmlm4vh"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_hsfrn"]
 [ext_resource type="Texture2D" uid="uid://c0a2hg2mlrq4q" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png" id="2_3vbno"]
@@ -71,24 +71,19 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rcal5"]
+size = Vector2(16, 12)
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 4
 position = Vector2(0, -6)
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 script = ExtResource("1_hsfrn")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_rkbg5")
-
-[node name="Camera" type="Camera2D" parent="."]
-limit_left = 0
-limit_smoothed = true
-position_smoothing_enabled = true
-drag_left_margin = 0.5
-drag_right_margin = 0.5
-editor_draw_limits = true
 
 [node name="Anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -9)
@@ -99,3 +94,15 @@ frame = 1
 frame_progress = 0.998613
 
 [node name="Animator" type="AnimationPlayer" parent="."]
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 4
+
+[node name="Collision" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_rcal5")
+
+[node name="Remote" type="RemoteTransform2D" parent="."]
+
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
